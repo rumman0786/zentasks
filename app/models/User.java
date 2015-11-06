@@ -1,6 +1,7 @@
 package models;
 import javax.persistence.*;
-import play.db.ebean.*;
+import com.avaje.ebean.Model;
+import com.avaje.ebean.Ebean;
 
 @Entity
 public class User extends Model {
@@ -17,6 +18,6 @@ public class User extends Model {
     }
 
     public static Finder<String,User> find = new Finder<String,User>(
-        String.class, User.class
+        User.class
     ); 
 }
